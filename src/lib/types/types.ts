@@ -2,13 +2,6 @@ import { ReactNode } from "react";
 import type { IconType } from "react-icons";
 import { links, socialLinks } from "../nav";
 
-export type AlertProps = {
-  message: React.ReactNode;
-  type: "success" | "error" | "info";
-  className?: string;
-  onClose?: () => void;
-};
-
 export type SpinnerProps = {
   size?: 24 | 50 | 100 | 48 | 32 | 64 | number;
   color?: string;
@@ -112,61 +105,6 @@ export type NavGroup = { name: string; values: Section[] };
 export type NavigationHeaderLink = NavRoute | NavGroup;
 export type NavigationHeaderLinks = Record<string, NavigationHeaderLink>;
 export type FaqItem = { q: string; a: string };
-
-export type MobileSandimaxHeaderProps = {
-  open: boolean;
-  setVisibility: (visible: boolean) => void;
-};
-
-export type ScrollTextProps = {
-  title: string;
-  subtitle: string;
-};
-
-export type Tile = {
-  title?: string;
-  img: string;
-  alt?: string;
-  label?: string;
-};
-
-export type Card = {
-  kicker: string;
-  headline: string;
-  title?: string;
-  body: string;
-  cta?: { label: string; href: string; external?: boolean };
-  footnote?: string;
-};
-
-export type Feature = {
-  id: string;
-  label: string;
-  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
-  desc?: string;
-};
-
-export type ApplicationProps = {
-  open: boolean;
-  minimized: boolean;
-  onClose: () => void;
-  onMinimize: () => void;
-  onActivate: () => void;
-  setActiveVideoSRC?: (src: string) => void;
-  dragConstraintsRef?: React.RefObject<HTMLElement>;
-};
-
-export type DockProps = {
-  open: boolean;
-  minimized: boolean;
-  onActivate: () => void;
-};
-
-export type MenuBarProps = {
-  open: boolean;
-  minimized: boolean;
-  onActivate: () => void;
-};
 
 export type SecondaryButtonProps = {
   text: string;

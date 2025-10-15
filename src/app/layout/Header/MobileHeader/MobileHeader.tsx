@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -9,7 +8,6 @@ import { useLockBodyScroll } from "@/src/hooks/useLockBodyScroll";
 import { MobileHeaderProps, NavLink } from "@/src/lib/types/types";
 import SpinnerMask from "@/src/app/components/ui/SpinnerMask/SpinnerMask";
 import { links, socialLinks } from "@/src/lib/nav";
-import { useAuthorDiscount } from "@/src/hooks/useAuthorDiscount";
 import { setColorTheme } from "@/src/utils/themeSchema";
 
 const MobileHeader: React.FC<MobileHeaderProps> = ({
@@ -20,7 +18,6 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
   const router = useRouter();
   const panelRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = React.useState(false);
-  const discount = useAuthorDiscount();
 
   useLockBodyScroll(isOpen);
 
@@ -36,7 +33,6 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
   if (!isOpen) return null;
 
   const containerClass = setColorTheme(styles, theme, "mobileHeaderContainer");
-  const mobileProfileText = setColorTheme(styles, theme, "mobileProfileText");
   const linksClass = setColorTheme(styles, theme, "link");
   const iconsClass = setColorTheme(styles, theme, "icons");
 

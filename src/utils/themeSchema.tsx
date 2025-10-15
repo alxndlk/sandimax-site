@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 export function setColorTheme(
-  styles: any,
+  styles,
   theme: "black" | "white",
   type:
     | "content"
