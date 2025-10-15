@@ -1,0 +1,165 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  z-index: 9998;
+  position: fixed;
+  flex-direction: column;
+  top: 0px;
+  padding: 0 1rem;
+  transition: 0.1s ease-in-out;
+  backdrop-filter: blur(30px) saturate(180%);
+}
+
+.active_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  z-index: 9998;
+  position: fixed;
+  top: 0px;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  height: 52px;
+  z-index: 9999;
+}
+
+.left,
+.right {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItem {
+  display: flex;
+}
+
+.right {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.linkContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  align-items: start;
+  text-align: center;
+  justify-content: center;
+}
+
+.linkDescription,
+.secondary {
+  opacity: 0.7;
+  margin-top: 0.125rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.125;
+  font-size: 12px;
+}
+
+.linkName,
+.primary {
+  line-height: 1.125;
+  letter-spacing: -0.02em;
+  font-size: 14px;
+}
+
+.user_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.navigation_header {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  font-size: 12px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 18px;
+}
+
+.navLink,
+.navButton {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.active {
+  border-bottom: 1px solid white;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.activeBlack {
+  border-bottom: 1px solid var(--globalnav-color);
+  color: var(--globalnav-color);
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.black {
+  color: var(--globalnav-color);
+}
+
+.mobile_icon {
+  margin-right: 1rem;
+  display: none;
+  opacity: 0.6;
+}
+
+@media (max-width: 830px) {
+  .navigation_header {
+    display: none;
+  }
+  .mobile_icon {
+    display: flex;
+  }
+  .logo {
+    font-size: 19px;
+  }
+  .sign_in {
+    display: none;
+  }
+}

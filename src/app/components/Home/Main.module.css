@@ -1,0 +1,524 @@
+/* layout */
+.main {
+  width: 100%;
+  background: #fff;
+}
+.container {
+  margin: 0 auto;
+  padding-top: 52px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* header */
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding-top: 110px;
+  max-width: 1680px;
+  justify-content: space-between;
+}
+.title {
+  font-size: 74px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #1e1e1d;
+  margin-right: 30px;
+}
+.subtitle {
+  font-size: 21px;
+  line-height: 1.1904761905;
+  font-weight: 600;
+  letter-spacing: 0.011em;
+  max-width: 400px;
+  color: #1e1e1d;
+  text-align: start;
+}
+
+/* filters */
+.filters {
+  display: inline-flex;
+}
+.filter {
+  background-color: rgb(232, 232, 237);
+  color: #1e1e1d;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0em;
+  padding: 8px 19px;
+  margin-left: 4px;
+  margin-right: 9px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+.filterActive {
+  background-color: #1e1e1d;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0em;
+  padding: 8px 19px;
+  margin-left: 4px;
+  margin-right: 9px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+/* grid */
+.grid {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f7;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 96px;
+  padding-bottom: 96px;
+  margin-bottom: 1rem;
+  padding-block-start: 87px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1680px;
+}
+
+/* card base */
+.card {
+  position: relative;
+  display: flex;
+  grid-template-rows: 180px auto;
+  overflow: hidden;
+  border-radius: 32px;
+  text-decoration: none;
+  height: 740px;
+  aspect-ratio: 9/16;
+}
+
+.appBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 01;
+}
+
+/* body */
+.cardBody {
+  display: flex;
+  gap: 15px;
+  padding: 1.5rem;
+  flex-direction: column;
+}
+
+.card_header {
+  display: flex;
+  flex-direction: row;
+  z-index: 10;
+  position: relative;
+  gap: 10px;
+  align-items: center;
+}
+
+.appImage {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.appTitle {
+  font-size: 26px;
+  line-height: 1.1428571429;
+  font-weight: 600;
+  letter-spacing: 0.007em;
+  color: #fff;
+  z-index: 10;
+}
+.appSubtitle {
+  font-size: 17px;
+  line-height: 1.23536;
+  font-weight: 300;
+  letter-spacing: -0.022em;
+  color: #fff;
+  z-index: 10;
+}
+
+.card_footer {
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+
+.appLink {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.3333733333;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #1e1e1d;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.appLinkSecondary {
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.3333733333;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.appLinkSecondary:hover {
+  text-decoration: underline;
+}
+
+.card:last-child {
+  user-select: none;
+  pointer-events: none;
+  position: relative;
+  opacity: 0.7;
+}
+
+.inDev {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(4px);
+}
+
+.inDevText {
+  margin-top: 1rem;
+  font-size: 24px;
+  line-height: 1.3333733333;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #fff;
+  max-width: 200px;
+  text-align: center;
+}
+
+/* focus states */
+.card:focus-visible,
+.filter:focus-visible,
+.filterActive:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 18px;
+}
+
+.platformTitle {
+  padding-top: 40px;
+  color: #1d1d1f;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.0834933333;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+  margin-bottom: 40px;
+}
+
+.platformSubtitle {
+  color: #86868b;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.compatibility {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 10;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.compatibility h1 {
+  font-size: 14px;
+  line-height: 1.2857742857;
+  font-weight: 400;
+  letter-spacing: -0.016em;
+  font-weight: 600;
+}
+
+.compatibility p {
+  font-size: 14px;
+  line-height: 1.2857742857;
+  font-weight: 400;
+  letter-spacing: -0.016em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* --------- Tablet (<= 1024px) --------- */
+@media (max-width: 1024px) {
+  .header {
+    padding-top: 80px;
+    gap: 16px;
+  }
+  .title {
+    font-size: 56px;
+    margin-right: 0;
+    text-align: left;
+  }
+  .subtitle {
+    font-size: 18px;
+    max-width: 520px;
+  }
+
+  .grid {
+    margin-top: 72px;
+    padding-bottom: 72px;
+    padding-block-start: 64px;
+  }
+
+  .card {
+    height: 640px;
+    aspect-ratio: 3/5;
+  }
+  .cardBody {
+    padding: 1.25rem;
+    gap: 12px;
+  }
+  .appImage {
+    width: 48px;
+    height: 48px;
+  }
+  .appTitle {
+    font-size: 24px;
+  }
+  .appSubtitle {
+    font-size: 16px;
+  }
+
+  .compatibility {
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+  .compatibility h1,
+  .compatibility p {
+    font-size: 13px;
+  }
+}
+
+/* --------- Mobile (<= 768px) --------- */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 52px;
+  }
+
+  .header {
+    padding-top: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+    padding-inline: 16px;
+  }
+
+  .title {
+    font-size: 44px;
+    line-height: 1.08;
+  }
+  .subtitle {
+    font-size: 16px;
+    max-width: none;
+    color: #3c3c3c;
+  }
+
+  .filters {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+  }
+  .filter,
+  .filterActive {
+    font-size: 16px;
+    padding: 10px 16px; /* tap target >= 44px высотой с учётом строки */
+    border-radius: 28px;
+    margin: 0;
+  }
+
+  .grid {
+    margin-top: 48px;
+    padding-bottom: 56px;
+    padding-block-start: 40px;
+  }
+  .content {
+    padding-inline: 16px;
+  }
+
+  .platformTitle {
+    font-size: 34px;
+    margin-bottom: 24px;
+    padding-top: 20px;
+  }
+  .platformSubtitle {
+    display: block;
+    margin-top: 4px;
+    font-size: 16px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .card {
+    height: 560px;
+    aspect-ratio: 3/4; /* ближе к iPhone пропорции */
+    border-radius: 20px;
+  }
+  .appBG {
+    object-position: center;
+  }
+
+  .cardBody {
+    padding: 14px;
+    gap: 10px;
+  }
+  .card_header {
+    gap: 8px;
+  }
+  .appImage {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+  }
+  .appTitle {
+    font-size: 22px;
+  }
+  .appSubtitle {
+    font-size: 15px;
+  }
+  .appLink {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .appLinkSecondary {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .compatibility {
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .compatibility h1 {
+    font-size: 12px;
+  }
+  .compatibility p {
+    font-size: 12px;
+  }
+}
+
+/* --------- Small Mobile (<= 480px) --------- */
+@media (max-width: 480px) {
+  .header {
+    padding-inline: 14px;
+  }
+  .title {
+    font-size: 34px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .filter,
+  .filterActive {
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 26px;
+  }
+
+  .platformTitle {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+
+  .cards {
+    gap: 1.5rem;
+  }
+
+  .card {
+    aspect-ratio: 9/16;
+    border-radius: 24px;
+  }
+  .cardBody {
+    padding: 1rem;
+    gap: 8px;
+  }
+  .appImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+  .appTitle {
+    font-size: 20px;
+  }
+  .appSubtitle {
+    font-size: 14px;
+  }
+
+  .appLink,
+  .appLinkSecondary {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .compatibility h1,
+  .compatibility p {
+    font-size: 11px;
+  }
+}
+
+/* --------- Safe-area (iOS вырезы) --------- */
+@supports (padding: max(0px)) {
+  .header,
+  .content {
+    padding-left: max(1.5rem, env(safe-area-inset-left));
+    padding-right: max(1.5rem, env(safe-area-inset-right));
+  }
+}

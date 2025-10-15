@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
+    "strict": false,
+    "noEmit": true, 
+    "esModuleInterop": true, 
     "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "moduleResolution": "bundler", 
+    "resolveJsonModule": true, 
+    "isolatedModules": true, 
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
@@ -19,9 +18,19 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["./*"]
+    },
+    "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "models/user.ts",
+    "app/api/register/route.ts",
+    "app/api/userExists/route.ts",
+    "app/Providers.js"
+, "next.config.js"  ],
   "exclude": ["node_modules"]
 }
