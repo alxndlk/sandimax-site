@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Spinner.module.css";
-import { SpinnerProps } from "@/lib/types/types";
 import Image from "next/image";
+import { SpinnerProps } from "@/src/lib/types/types";
 
 const Spinner = ({ size }: SpinnerProps) => {
   return (
