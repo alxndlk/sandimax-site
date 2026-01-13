@@ -49,6 +49,11 @@ export const config = {
     baseURL: "https://sandimax.com/",
     baseName: "Sandimax",
   },
+  copier: {
+    baseURL: "https://trycopier.app/",
+    baseName: "Copier",
+    downloadURL: "https://apps.apple.com/app/copier",
+  },
   wallper: {
     baseURL: "https://wallper.app/",
     baseName: "Wallper",

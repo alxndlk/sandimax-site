@@ -22,7 +22,7 @@ type AppItem = {
 
 const FILTERS = ["All", "MacOS", "iOS"] as const;
 type Filter = (typeof FILTERS)[number];
-type Platform = Exclude<Filter, "All">; // "MacOS" | "iOS"
+type Platform = Exclude<Filter, "All">;
 
 const APPS: Record<Platform, AppItem[]> = {
   MacOS: [
@@ -36,6 +36,18 @@ const APPS: Record<Platform, AppItem[]> = {
       tone: "indigo",
       image: "/logos/w.png",
       backgroundImage: "/wallper/wallper-bg.png",
+      compatibility: ["Mac"],
+    },
+    {
+      id: "copier",
+      title: "Copier",
+      subtitle:
+        "Copier is a powerful clipboard manager for macOS. All your clipboard data is encrypted and synced securely across all your Apple devices via iCloud. One-time payment of $5, lifetime license.",
+      href: "https://trycopier.app/",
+      badge: "Open",
+      tone: "blue",
+      image: "/copier/logo.png",
+      backgroundImage: "/copier/copier-background.png",
       compatibility: ["Mac"],
     },
   ],
@@ -94,7 +106,7 @@ const Main = () => {
           exit={{ opacity: 0, y: 10 }}
         >
           <div className={styles.content}>
-            {/* Filters */}
+            {}
             <div
               role="tablist"
               aria-label="Platforms"
@@ -115,7 +127,7 @@ const Main = () => {
               ))}
             </div>
 
-            {/* Platform Title */}
+            {}
             {filter === "MacOS" && (
               <h2 className={styles.platformTitle}>
                 MacOS Apps.{" "}
@@ -141,7 +153,6 @@ const Main = () => {
               </h2>
             )}
 
-            {/* App Cards */}
             <div className={styles.cards}>
               {displayedApps.map((app) => (
                 <motion.div
@@ -183,19 +194,9 @@ const Main = () => {
                         priority
                         quality={100}
                       />
-                      <h2
-                        className={styles.appTitle}
-                        // style={app.id === "locora" ? { color: "#fff" } : {}}
-                      >
-                        {app.title}
-                      </h2>
+                      <h2 className={styles.appTitle}>{app.title}</h2>
                     </div>
-                    <p
-                      className={styles.appSubtitle}
-                      // style={app.id === "locora" ? { color: "#fff" } : {}}
-                    >
-                      {app.subtitle}
-                    </p>
+                    <p className={styles.appSubtitle}>{app.subtitle}</p>
                     {app.id !== "locora" && (
                       <div className={styles.card_footer}>
                         <a

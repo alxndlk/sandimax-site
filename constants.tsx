@@ -95,6 +95,9 @@ export const sections: SectionItem[] = [
   },
   {
     title: "Applications",
-    items: [{ label: "Wallper", href: "https://wallper.app", external: true }],
+    items: [
+      { label: "Wallper", href: "https://wallper.app", external: true },
+      { label: "Copier", href: "https://trycopier.app", external: true },
+    ],
   },
 ];
