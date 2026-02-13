@@ -15,7 +15,7 @@ type AppItem = {
   href: string;
   badge?: string;
   image?: string;
-  tone: "blue" | "green" | "purple" | "indigo" | "pink" | "slate";
+  tone: "blue" | "green" | "purple" | "indigo" | "pink" | "slate" | "black";
   backgroundImage?: string;
   compatibility: string[];
 };
@@ -52,6 +52,18 @@ const APPS: Record<Platform, AppItem[]> = {
     },
   ],
   iOS: [
+    {
+      id: "calendarly",
+      title: "Calendarly",
+      subtitle:
+        "The first automated calendar integrated directly into your Lock Screen. Your schedule, reimagined for focus.",
+      href: "https://apps.apple.com/app/calendarly-calendar-wallpaper/id6758898739",
+      badge: "Open",
+      tone: "black",
+      image: "/logos/calendarly.png",
+      backgroundImage: "/calendarly/bg.png",
+      compatibility: ["iPhone"],
+    },
     {
       id: "locora",
       title: "Locora",
@@ -106,7 +118,6 @@ const Main = () => {
           exit={{ opacity: 0, y: 10 }}
         >
           <div className={styles.content}>
-            {}
             <div
               role="tablist"
               aria-label="Platforms"

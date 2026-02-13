@@ -60,4 +60,10 @@ export const config = {
     downloadURL:
       "https://github.com/alxndlk/wallper-app/releases/download/Release/Wallper.dmg",
   },
+  calendarly: {
+    baseURL: "https://getcalendarly.com/",
+    baseName: "Calendarly",
+    downloadURL:
+      "https://apps.apple.com/app/calendarly-calendar-wallpaper/id6758898739",
+  },
 };
